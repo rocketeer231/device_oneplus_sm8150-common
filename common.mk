@@ -90,7 +90,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     AntHalService
 
-# AOSiP Device Settings
+# Device Settings
 PRODUCT_PACKAGES += \
     DeviceSettings
 

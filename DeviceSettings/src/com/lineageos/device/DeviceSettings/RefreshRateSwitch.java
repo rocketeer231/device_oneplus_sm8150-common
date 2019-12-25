@@ -15,7 +15,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 *
 */
-package com.aosip.device.DeviceSettings;
+package com.lineageos.device.DeviceSettings;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -24,29 +24,36 @@ import androidx.preference.Preference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.PreferenceManager;
 
-import com.aosip.device.DeviceSettings.DeviceSettings;
+import com.lineageos.device.DeviceSettings.DeviceSettings;
 
-public class AutoRefreshRateSwitch implements OnPreferenceChangeListener {
+public class RefreshRateSwitch implements OnPreferenceChangeListener {
 
-    public static final String SETTINGS_KEY = DeviceSettings.KEY_SETTINGS_PREFIX + DeviceSettings.KEY_AUTO_REFRESH_RATE;
+    public static final String SETTINGS_KEY = DeviceSettings.KEY_SETTINGS_PREFIX + DeviceSettings.KEY_REFRESH_RATE;
     private Context mContext;
 
-    public AutoRefreshRateSwitch(Context context) {
+    public RefreshRateSwitch(Context context) {
         mContext = context;
     }
 
     public static boolean isCurrentlyEnabled(Context context) {
-        return Settings.System.getInt(context.getContentResolver(), SETTINGS_KEY, 1) == 1;
+        return Settings.System.getFloat(context.getContentResolver(),
+                Settings.System.PEAK_REFRESH_RATE, 90f) == 90f;
+    }
+
+    public static void setPeakRefresh (Context context, boolean enabled) {
+        Settings.System.putFloat(context.getContentResolver(),
+                Settings.System.PEAK_REFRESH_RATE, enabled ? 90f : 60f);
+        Settings.System.putFloat(context.getContentResolver(),
+                Settings.System.MIN_REFRESH_RATE, enabled ? 90f : 60f);
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         Boolean enabled = (Boolean) newValue;
         Settings.System.putFloat(mContext.getContentResolver(),
-                Settings.System.PEAK_REFRESH_RATE, 90f);
+                Settings.System.PEAK_REFRESH_RATE, enabled ? 90f : 60f);
         Settings.System.putFloat(mContext.getContentResolver(),
-                Settings.System.MIN_REFRESH_RATE, 60f);
-        Settings.System.putInt(mContext.getContentResolver(), SETTINGS_KEY, enabled ? 1 : 0);
+                Settings.System.MIN_REFRESH_RATE, enabled ? 90f : 60f);
         return true;
     }
 }
