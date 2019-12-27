@@ -16,21 +16,6 @@
     <string name="dolby_title">杜比全景声</string>
     <string name="device_title">一加设置</string>
     <string name="device_summary">调整一加特定设备设置</string>
-    <string name="display_title">显示</string>
-    <string name="srgb_mode_summary"></string>
-    <string name="srgb_mode_title">sRGB 模式</string>
-    <string name="hbm_mode_summary"></string>
-    <string name="hbm_mode_title">高亮度模式</string>
-    <string name="wide_color_mode_title">广色域模式</string>
-    <string name="dci_mode_summary"></string>
-    <string name="dci_mode_title">DCI-P3 广色域模式</string>
-    <string name="Night_mode_summary"></string>
-    <string name="Night_mode_title">夜间模式</string>
-    <string name="panel_category_title">面板模式</string>
-    <string name="panel_category_summary">面板颜色校正模式</string>
-    <string name="off_mode_title">关闭</string>
-    <string name="tile_panel_mode">面板模式</string>
-    <string name="tile_hbm_mode">高亮度模式</string>
     <string name="display_modes_category_title">显示模式</string>
     <string name="display_modes_category_summary">更改分辨率和刷新率</string>
     <!-- Notification slider -->
@@ -45,7 +30,4 @@
     <string name="notification_slider_mode_vibrate">振动</string>
     <string name="notification_slider_mode_none">正常</string>
     <string name="buttons_dashboard_summary">三段式开关设置</string>
-    <string name="category_vibrator">振动</string>
-    <string name="vib_strength_title_head">强度</string>
-    <string name="vib_strength_summary_head">自定义振动强度</string>
 </resources>

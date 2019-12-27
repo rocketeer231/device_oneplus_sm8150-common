@@ -16,21 +16,6 @@
     <string name="dolby_title">Dolby Atmos</string>
     <string name="device_title">Ustawienia OnePlus</string>
     <string name="device_summary">Ustawienia OnePlus dotyczące tego urządzenia</string>
-    <string name="display_title">Wyświetlacz</string>
-    <string name="srgb_mode_summary"></string>
-    <string name="srgb_mode_title">Tryb sRGB</string>
-    <string name="hbm_mode_summary"></string>
-    <string name="hbm_mode_title">Tryb wysokiej jasności</string>
-    <string name="wide_color_mode_title">Tryb szerokiej gamy kolorów</string>
-    <string name="dci_mode_summary"></string>
-    <string name="dci_mode_title">Tryb szerokiej gamy kolorów DCI-P3</string>
-    <string name="Night_mode_summary"></string>
-    <string name="Night_mode_title">Tryb nocny</string>
-    <string name="panel_category_title">Tryby wyświetlania</string>
-    <string name="panel_category_summary">Tryby wyświetlania z korekcją kolorów</string>
-    <string name="off_mode_title">Wyłącz</string>
-    <string name="tile_panel_mode">Tryby wyświetlania</string>
-    <string name="tile_hbm_mode">Tryb wysokiej jasności</string>
     <string name="display_modes_category_title">Tryby wyświetlacza</string>
     <string name="display_modes_category_summary">Zmień rozdzielczość i częstotliwość odświeżania</string>
     <!-- Notification slider -->
@@ -45,7 +30,4 @@
     <string name="notification_slider_mode_vibrate">Wibracje</string>
     <string name="notification_slider_mode_none">Normalny</string>
     <string name="buttons_dashboard_summary">Ustawienia suwaka powiadomień</string>
-    <string name="category_vibrator">Wibracje</string>
-    <string name="vib_strength_title_head">Siła</string>
-    <string name="vib_strength_summary_head">Zdefiniuj siłę wibracji</string>
 </resources>
